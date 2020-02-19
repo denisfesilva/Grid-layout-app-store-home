@@ -1,0 +1,147 @@
+.populares {
+    padding: 3rem 1.2rem;
+}
+
+.populares__itens {
+    display: grid;
+    grid-row: 20% 80%;
+    grid-template-areas: "titulo""conteudo";
+}
+
+/**Titulo - INFO**/
+.populares__info {
+    height: 6vh;
+    width: 100%;
+    margin: .8rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.populares__cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    color: #333333;
+    width: 98%;
+}
+
+.populares__titulo {
+    font-weight: 200;
+    font-size: .8rem;
+    font-weight: 200;
+    color: #333333;
+
+}
+.populares__titulo svg {
+    margin-right: .20rem;
+}
+
+.populares__botao {
+    font-size: .8rem;
+    background: transparent;
+    border:none;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+/**Conteudo**/
+.populares__conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: conteudo;
+    justify-content: space-around;
+}
+
+.populares__card {
+    background-color: #fdfdfd;
+    display: grid;
+    grid-template-rows: 173px auto;
+    grid-template-columns: 100%;
+    width: calc(20% - 1rem);
+    grid-template-areas:
+        "card-imagem"
+        "card-corpo"
+    ;
+    cursor: pointer;
+    margin-right: 1rem;
+
+}
+.populares__card:last-child{
+    margin-right: 0;
+}
+
+.populares__card:hover .populares__card___imagem {
+    transition: .5s;
+    opacity: 70%;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.populares__card___imagem {
+    grid-area: card-imagem;
+    width: 100%;
+    height: 100%;
+    grid-row: 1/1;
+}
+
+.populares__card___corpo {
+    grid-area: card-corpo;
+    width: 100%;
+    height: 100%;
+    grid-row: 2/2;
+    padding: .75rem;
+    row-gap: .4rem;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+        "card-corpo-cabecalho"
+        "card-corpo-conteudo";
+}
+
+.populares__card___cabecalho {
+    grid-area: card-corpo-cabecalho;
+
+}
+
+.populares__card___titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+
+.populares__card___data {
+    font-size: .9rem;
+    font-weight: 100;
+    color: #949494;
+}
+
+.populares__card___descricao {
+    width: 100%;
+    font-size: .8rem;
+    height: 100%;
+    text-align: justify;
+    line-height: 1.5;
+    margin: 1rem 0;
+    color: #333333;
+
+    grid-area: card-corpo-conteudo;
+}
+
+.populares__card___descricao:nth-child(2+1) {}
